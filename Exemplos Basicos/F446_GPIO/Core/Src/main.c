@@ -101,7 +101,7 @@ int main(void)
     /*GPIOA->ODR |= 0x00000020; // ligue o LED (PA5)
     HAL_Delay(500);
     GPIOA->ODR &= ~0x00000020; // desligue o LED (PA5)
-    HAL_Delay(500);  */
+    HAL_Delay(500);   */
 
     //Exemplo2 - blink com HAL
     HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
@@ -109,7 +109,7 @@ int main(void)
     HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
     HAL_Delay(2000);
 
-    //Exemplo3 - Leitura de um botão com registradores
+    //Exemplo3 - Leitura de um botão com registradoreS
     /*if(GPIOC->IDR & 0x2000) // se PC13 estiver em nível alto
       GPIOA->ODR |= 0x00000020; // ligue o LED (PA5)
     else
