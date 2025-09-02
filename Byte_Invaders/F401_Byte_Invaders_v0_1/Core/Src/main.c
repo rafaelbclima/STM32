@@ -32,7 +32,6 @@ typedef struct
   uint8_t coluna; //Cordenada do centro da nave
 } nave;
 
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
