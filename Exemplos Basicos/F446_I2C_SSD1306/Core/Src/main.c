@@ -100,8 +100,8 @@ int main(void)
   SSD1306_Init (); // Inicializa o display
 
   //Exemplo 1
-  SSD1306_Clear();      //Seta todos os pixels do buffer para branco
-  SSD1306_UpdateScreen();   //Flush do buffer para a tela
+  /*SSD1306_Clear();      //Seta todos os pixels do buffer para branco
+  SSD1306_UpdateScreen();   //Flush do buffer para a tela*/
 
   //Exemplo 2
   // Abrir o WaveForms e hackear a última mensagem escrita pelo MASTER. Substituir os dados da PAG 7 de 0x00 para 0xFF
@@ -131,7 +131,7 @@ int main(void)
   SSD1306_Clear();                //Seta todos os pixels do buffer para branco
   SSD1306_GotoXY (20,20);             //Posiciona o "cursor" no pixel 20x20
   SSD1306_Puts ("LTD-UFCG", &Font_11x18, 1);   //Escreve o texto no buffer
-  SSD1306_UpdateScreen();             //Flush do buffer para a tela
+  SSD1306_UpdateScreen();             //Flush do buffer para a tela*/
   /* USER CODE END 2 */
 
   /* Infinite loop */
