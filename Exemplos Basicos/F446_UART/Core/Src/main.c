@@ -104,8 +104,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    //HAL_UART_Receive(&huart3, readBuff, 2, 1000); //Waveform
-    HAL_UART_Receive(&huart2, readBuff, 2, 1000); //Termite
+    HAL_UART_Receive(&huart3, readBuff, 2, 1000); //Waveform
+    //HAL_UART_Receive(&huart2, readBuff, 2, 1000); //Termite
     if(readBuff[0] == 'L')
       HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
     else if(readBuff[0] == 'D')
