@@ -1,5 +1,5 @@
 # STM32
-Reposotório de exemplos de projetos com o STM32CubeIDE para a disciplina de Sistemas Embarcados - UAEE UFCG
+Repositório de exemplos de projetos com o STM32CubeIDE para a disciplina de Sistemas Embarcados - UAEE UFCG
 
 Exemplos básicos
 - **BluePill_c6t6_Blink**: Blink do led onboard. (<ins>BluePill STM32F103C6T6</ins>)
