@@ -44,9 +44,10 @@ UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-//uint8_t mensagem_inicial[] = {'0','1','2','3','4',5,6,7,8,9};
-uint8_t mensagem_inicial[] = {"Digite L para ligar o led e D para desliga-lo:"};
-uint8_t readBuff[2];
+//uint8_t mensagem_inicial[] = {'a', 'b'};
+uint8_t mensagem_inicial[] = {'0','1','2','3','4',5,6,7,8,9};
+//uint8_t mensagem_inicial[] = {"Digite L para ligar o led e D para desliga-lo:"};
+//uint8_t readBuff[2];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,20 +97,26 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_UART_Transmit(&huart2, mensagem_inicial, sizeof(mensagem_inicial)-1, 1000);
-  HAL_UART_Transmit(&huart3, mensagem_inicial, sizeof(mensagem_inicial)-1, 1000);
+  HAL_UART_Transmit(&huart2, mensagem_inicial, sizeof(mensagem_inicial), 1000); //Termite via stlink
+  HAL_UART_Transmit(&huart3, mensagem_inicial, sizeof(mensagem_inicial), 1000); //Waveform via analisador lógico
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    HAL_UART_Receive(&huart3, readBuff, 2, 1000); //Waveform
-    //HAL_UART_Receive(&huart2, readBuff, 2, 1000); //Termite
+
+    //Exemplo de escrita
+    //HAL_UART_Transmit(&huart3, mensagem_inicial, sizeof(mensagem_inicial), 1000);
+    //HAL_Delay(100);
+
+    //Exemplo de leitura
+    //HAL_UART_Receive(&huart3, readBuff, 2, 1000); //Waveform
+    /*HAL_UART_Receive(&huart2, readBuff, 2, 1000); //Termite
     if(readBuff[0] == 'L')
       HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
     else if(readBuff[0] == 'D')
-      HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
+      HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);*/
 
     /* USER CODE END WHILE */
 

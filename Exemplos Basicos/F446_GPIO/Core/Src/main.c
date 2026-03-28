@@ -98,16 +98,16 @@ int main(void)
   while (1)
   {
     //Exemplo1 - blink com registradores
-    /*GPIOA->ODR |= 0x00000020; // ligue o LED (PA5)
-    HAL_Delay(500);
+    GPIOA->ODR |= 0x00000020; // ligue o LED (PA5)
+    HAL_Delay(100);
     GPIOA->ODR &= ~0x00000020; // desligue o LED (PA5)
-    HAL_Delay(500);   */
+    HAL_Delay(500);
 
     //Exemplo2 - blink com HAL
-    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
+    /*HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
     HAL_Delay(2000);
     HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 0);
-    HAL_Delay(2000);
+    HAL_Delay(2000);*/
 
     //Exemplo3 - Leitura de um botão com registradoreS
     /*if(GPIOC->IDR & 0x2000) // se PC13 estiver em nível alto

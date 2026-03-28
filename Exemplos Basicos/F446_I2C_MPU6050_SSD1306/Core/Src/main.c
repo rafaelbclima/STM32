@@ -144,7 +144,7 @@ int main(void)
    //Exemplo 5
    /*
    // Leitura no WaveForms - MPU6050
-   const adr = 0x68;
+   /*const adr = 0x68;
 
    var OK = Read(adr, 0x75, 1); //Ping
    Write(adr, 0x6B, 0x00); //Power mode =  wake up
