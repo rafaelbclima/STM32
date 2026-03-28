@@ -130,7 +130,7 @@ int main(void)
   //Exemple 4
   SSD1306_Clear();                //Seta todos os pixels do buffer para branco
   SSD1306_GotoXY (20,20);             //Posiciona o "cursor" no pixel 20x20
-  SSD1306_Puts ("LTD-UFCG", &Font_11x18, 1);   //Escreve o texto no buffer
+  SSD1306_Puts ("STM-UFCG", &Font_11x18, 1);   //Escreve o texto no buffer
   SSD1306_UpdateScreen();             //Flush do buffer para a tela*/
   /* USER CODE END 2 */
 
